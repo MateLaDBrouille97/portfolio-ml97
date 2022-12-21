@@ -1,0 +1,17 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: ['assets.vercel.com',"portfolioml26151fd83d4a40cb89e358a0b8c234d582358-staging.s3.amazonaws.com"],
+        port: '',
+        pathname: '/image/upload/**',
+      },
+    ],
+  },
+}
+
+module.exports = nextConfig
