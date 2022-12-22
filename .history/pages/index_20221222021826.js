@@ -23,7 +23,9 @@ import PortfolioContextProvider from '../contexts/PortfolioContext';
 
 Amplify.configure({
   ...awsconfig,
-  ssr: true,
+  DataStore:{
+    authModeStrategyType:AuthModeStrategyType.MULTI_AUTH
+  }
 });
 
 export default function Home2() {
