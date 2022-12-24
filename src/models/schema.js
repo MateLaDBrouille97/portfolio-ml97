@@ -350,6 +350,13 @@ export const schema = {
                     "attributes": [],
                     "isArrayNullable": true
                 },
+                "addressPost": {
+                    "name": "addressPost",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -658,5 +665,5 @@ export const schema = {
     },
     "nonModels": {},
     "codegenVersion": "3.3.2",
-    "version": "787a0b219c93cc486c11fb2b39fc3d22"
+    "version": "be2c7208a53e34102fda64e81cce86b7"
 };

@@ -57,16 +57,6 @@
     cursor: pointer;
 }
 
-.work__button2{
-    color: var(--text-color);
-    font-size: var(--normal-font-size);
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    column-gap: 0.25rem;
-    cursor: pointer;
-}
-
 .work__social-icon{
     font-size:1.25rem;
     color: var(--title-color);
@@ -83,7 +73,9 @@
 
 .work__button-icon2{
     font-size: 1.5rem;
-    transition: 0.4s;   
+    transition: 0.4s;
+   
+    
 }
 
 
@@ -92,10 +84,6 @@
 }
 
 .work__button:hover .work__button-icon2{
-    transform: translateX(0.25rem);
-}
-
-.work__button2:hover .work__button-icon2{
     transform: translateX(0.25rem);
 }
 
@@ -153,14 +141,6 @@
 }
 
 .work__button:hover{
-    color: cadetblue;
-} 
-
-.work__button2:hover{
-    color: cadetblue;
-} 
-
-.work__social-icon:hover{
     color: cadetblue;
 } 
 

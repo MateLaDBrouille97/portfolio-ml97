@@ -146,6 +146,7 @@ type EagerPortfolioPost = {
   readonly type?: PortfolioType | keyof typeof PortfolioType | null;
   readonly userID: string;
   readonly technologies?: (string | null)[] | null;
+  readonly addressPost?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -162,6 +163,7 @@ type LazyPortfolioPost = {
   readonly type?: PortfolioType | keyof typeof PortfolioType | null;
   readonly userID: string;
   readonly technologies?: (string | null)[] | null;
+  readonly addressPost?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

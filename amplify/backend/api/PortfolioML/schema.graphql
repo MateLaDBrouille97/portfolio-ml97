@@ -55,6 +55,7 @@ type PortfolioPost @model @auth(rules: [{allow: public}]) {
   type: PortfolioType
   userID: ID! @index(name: "byUser")
   technologies: [String]
+  addressPost: String
 }
 
 type User @model @auth(rules: [{allow: public}]) {

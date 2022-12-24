@@ -95,10 +95,6 @@
     transform: translateX(0.25rem);
 }
 
-.work__button2:hover .work__button-icon2{
-    transform: translateX(0.25rem);
-}
-
 .work__modal{
     position: fixed;
     top: 0;
@@ -153,10 +149,6 @@
 }
 
 .work__button:hover{
-    color: cadetblue;
-} 
-
-.work__button2:hover{
     color: cadetblue;
 } 
 

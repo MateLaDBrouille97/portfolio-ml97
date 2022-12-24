@@ -12,7 +12,22 @@ import  "../styles/testimonials.css";
 import  "../styles/work.css";
 import React from 'react';
 
+import AWS from 'aws-sdk';
 
+export async function getStaticProps(context) {
+  // Retrieve the value of the environment variable
+  const apiKey = "da2-cnr4met3urhffoddsx6r6zx6da";
+
+  // Use the AWS SDK to access data from AWS Amplify
+  const amplify = new AWS.Amplify({ apiKey });
+  const data = await amplify.getData();
+  console.log(data);
+  return {
+    props: {
+      data,
+    },
+  };
+}
 
 
 function MyApp({ Component, pageProps }) {

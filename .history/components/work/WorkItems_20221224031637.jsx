@@ -67,14 +67,13 @@ useEffect(()=>{
             <Image src={image} alt="" className="work__modal-img" width={400} height={400}/>
              <h3 className="work__modal-title">{work?.title} </h3>
              <ul className="work__list grid">
-                {techno.map((item2,index)=>{
+                   {techno.map((item2,index)=>{
                     return(
                       <div className="skills__data" key={item2.id}>
                         {item2==="DynamoDB"?<Icon icon="simple-icons:amazondynamodb"  className='skills__card-icon' />:item2==="PostGreSQL"? <Icon icon="akar-icons:postgresql-fill"  className='skills__card-icon'/>:item2==="Node Js"? <Icon icon="simple-icons:nodedotjs"  className='skills__card-icon' />:item2==="C++/Java"?<Icon icon="bxl:java"  className='skills__card-icon'/>:item2==="AWS Amplify"?<Icon icon="ion:logo-amplify"  className='skills__card-icon' />:item2==="Python"?<Icon icon="tabler:brand-python"  className='skills__card-icon'/>:item2==="React Native"?<Icon icon="tabler:brand-react-native" className='skills__card-icon' />:item2==="Javascript"? <Icon icon="simple-icons:javascript"  className='skills__card-icon' />:item2==="HTML"? <Icon icon="akar-icons:html-fill"  className='skills__card-icon' />:item2==="Git"?<Icon icon="teenyicons:git-outline"  className='skills__card-icon' />:<Icon icon="el:css"  className='skills__card-icon'/>}
                     </div>
                     )
-                   })
-                }
+                   })}
              </ul>
              <p className="work__modal-description">
                       {work?.description}
