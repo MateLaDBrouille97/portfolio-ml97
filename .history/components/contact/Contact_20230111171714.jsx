@@ -47,7 +47,7 @@ const {dbUser}=useUserContext();
                     <span className="contact__card-data">
                         {dbUser?.email}
                     </span>
-                    <a href="" className="contact__button">Write Me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mlab33972@gmail.com" className="contact__button">Write Me <Icon icon="bx:right-arrow-alt" className=" contact__button-icon"></Icon></a>
                 </div>
 
                 <div className="contact__card">
@@ -56,16 +56,16 @@ const {dbUser}=useUserContext();
                     <span className="contact__card-data">
                         {dbUser?.phone}
                     </span>
-                    <a href="https://api.whatsapp.com/send?phone=5146490492&text=Hello" className="contact__button">Write Me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=15146490492&text=Hello" className="contact__button">Write Me <Icon icon="bx:right-arrow-alt" className=" contact__button-icon"></Icon></a>
                 </div>
 
                 <div className="contact__card">
-                    <i className="uil uil-instagram contact__card-icon"></i>
+                    <Icon icon="bxl:instagram" className="contact__card-icon"></Icon>
                     <h3 className="contact__card-title">Instagram</h3>
                     <span className="contact__card-data">
                         {dbUser?.instagram}
                     </span>
-                    <a href="https://www.instagram.com/oto.mata33/" className="contact__button">Write Me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a href="https://www.instagram.com/oto.mata33/" className="contact__button">Write Me <Icon icon="bx:right-arrow-alt" className=" contact__button-icon"></Icon></a>
                 </div>
 
             </div>

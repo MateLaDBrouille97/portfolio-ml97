@@ -8,20 +8,24 @@ const SkillsContext = createContext({});
 
 const SkillsContextProvider = ({ children }) => {
 
- const {user}=useUserContext();
+ const {dbUser}=useUserContext();
  const[skillsBE,setSkillsBE]=useState([]);
  const[skillsFE,setSkillsFE]=useState([]);
+ const[skillsDB,setSkillsDB]=useState([]);
 
  useEffect(()=>{
-  const fetchSkill =()=>{
-    DataStore.query(Skill,(skill)=>skill.type.eq("BACKEND")).then(skills=>setSkillsBE(skills));
-    DataStore.query(Skill,(skill)=>skill.type.eq("FRONTEND")).then(skills=>setSkillsFE(skills));
+  const fetchSkill = async()=>{
+    await DataStore.query(Skill,(skill)=>skill.type.eq("BACKEND")).then(skills=>setSkillsBE(skills));
+    await DataStore.query(Skill,(skill)=>skill.type.eq("FRONTEND")).then(skills=>setSkillsFE(skills));
+    await DataStore.query(Skill,(skill)=>skill.type.eq("DATABASE")).then(skills=>setSkillsDB(skills));
   }
   fetchSkill();
  },[])
 
+
+ console.log(skillsDB)
  return (
-    <SkillsContext.Provider value={{ skillsBE,skillsFE }}>
+    <SkillsContext.Provider value={{ skillsBE,skillsFE,skillsDB }}>
       {children}
     </SkillsContext.Provider>
   );

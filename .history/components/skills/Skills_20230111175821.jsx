@@ -18,7 +18,7 @@ const Skills = () => {
       <div className="skills__container container grid">
         {skillsFE&&<Frontend skillsFE={skillsFE}/>}
         {skillsBE&&<Backend skillsBE={skillsBE}/>}
-        {skillsDB&&<DataBase skillsDB={skillsDB}/>}
+        {/* {skillsDB&&<DataBase skillsBE={skillsDB}/>} */}
       </div>
     </section>
   )

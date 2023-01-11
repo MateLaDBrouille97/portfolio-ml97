@@ -4,7 +4,8 @@ import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/
 
 export enum SkillType {
   BACKEND = "BACKEND",
-  FRONTEND = "FRONTEND"
+  FRONTEND = "FRONTEND",
+  DATABASE = "DATABASE"
 }
 
 export enum QualificationType {

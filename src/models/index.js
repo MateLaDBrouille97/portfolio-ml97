@@ -4,7 +4,8 @@ import { schema } from './schema';
 
 const SkillType = {
   "BACKEND": "BACKEND",
-  "FRONTEND": "FRONTEND"
+  "FRONTEND": "FRONTEND",
+  "DATABASE": "DATABASE"
 };
 
 const QualificationType = {

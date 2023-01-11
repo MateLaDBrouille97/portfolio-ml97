@@ -636,7 +636,8 @@ export const schema = {
             "name": "SkillType",
             "values": [
                 "BACKEND",
-                "FRONTEND"
+                "FRONTEND",
+                "DATABASE"
             ]
         },
         "QualificationType": {

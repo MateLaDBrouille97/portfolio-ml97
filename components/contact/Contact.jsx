@@ -56,7 +56,7 @@ const {dbUser}=useUserContext();
                     <span className="contact__card-data">
                         {dbUser?.phone}
                     </span>
-                    <a href="https://api.whatsapp.com/send?phone=5146490492&text=Hello" className="contact__button">Write Me <Icon icon="bx:right-arrow-alt" className=" contact__button-icon"></Icon></a>
+                    <a href="https://api.whatsapp.com/send?phone=15146490492&text=Hello" className="contact__button">Write Me <Icon icon="bx:right-arrow-alt" className=" contact__button-icon"></Icon></a>
                 </div>
 
                 <div className="contact__card">

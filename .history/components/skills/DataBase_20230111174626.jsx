@@ -6,15 +6,15 @@ import { Icon } from '@iconify/react';
 // const BackEnd = DataFrontend.DataBackend;
 
 
-const Backend = (props) => {
+const DataBase = (props) => {
 
     const {skillsBE}=props;
     const secondColumnStart = Math.floor(skillsBE.length / 2);
 
   return (
     <div className="skills__content">
-        <h3 className="skills__title">Backend Developer</h3>
-        <div className="skills__box">
+        <h3 className="skills__title">Database </h3>
+        <div className="skills__box" >
             <div className="skills__group">
 
 
@@ -66,4 +66,4 @@ const Backend = (props) => {
   )
 }
 
-export default Backend
+export default DataBase

@@ -22,8 +22,6 @@ const SkillsContextProvider = ({ children }) => {
   fetchSkill();
  },[])
 
-
- 
  return (
     <SkillsContext.Provider value={{ skillsBE,skillsFE,skillsDB }}>
       {children}

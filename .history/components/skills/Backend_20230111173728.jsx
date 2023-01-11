@@ -28,7 +28,7 @@ const Backend = (props) => {
                         :item.name==="C++/Java"?<Icon icon="bxl:java"  className='skills__card-icon'/>
                         :item.name==="AWS Amplify"?<Icon icon="ion:logo-amplify"  className='skills__card-icon' />
                         :item.name==="Vercel"?<Icon icon="ion:logo-vercel" className='skills__card-icon'/>
-                        :item.name==="Next.js"?<Icon  icon="tabler:brand-nextjs"  className='skills__card-icon'/>
+                        :item.name==="Next"?<Icon  icon="tabler:brand-nextjs"  className='skills__card-icon'/>
                         :<Icon icon="tabler:brand-python"  className='skills__card-icon'/>}
                         <div >
                             <h3 className="skills__name" >{item.name}</h3>
@@ -50,7 +50,7 @@ const Backend = (props) => {
                         :item.name==="C++/Java"?<Icon icon="bxl:java"  className='skills__card-icon'/>
                         :item.name==="AWS Amplify"?<Icon icon="ion:logo-amplify"  className='skills__card-icon' />
                         :item.name==="Vercel"?<Icon icon="ion:logo-vercel" className='skills__card-icon'/>
-                        :item.name==="Next.js"?<Icon  icon="tabler:brand-nextjs"  className='skills__card-icon'/>
+                        :item.name==="Next"?<Icon  icon="tabler:brand-nextjs"  className='skills__card-icon'/>
                         :<Icon icon="tabler:brand-python"  className='skills__card-icon'/>}
                         <div >
                             <h3 className="skills__name" >{item.name}</h3>

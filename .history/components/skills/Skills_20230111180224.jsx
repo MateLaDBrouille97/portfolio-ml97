@@ -1,13 +1,13 @@
 import React from 'react';
-import "./skills.css";
 import Frontend from './Frontend';
 import Backend from './Backend';
+import DataBase from './DataBase';
 import { useSkillsContext } from '../../contexts/SkillContext';
 
 const Skills = () => {
 
-  const {skillsBE,skillsFE}=useSkillsContext();
-  
+  const {skillsBE,skillsFE,skillsDB}=useSkillsContext();
+  console.log(skillsDB?.length)
   return (
     <section className="skills section" id="skills">
       <h2 className="section__title">
@@ -18,6 +18,7 @@ const Skills = () => {
       <div className="skills__container container grid">
         {skillsFE&&<Frontend skillsFE={skillsFE}/>}
         {skillsBE&&<Backend skillsBE={skillsBE}/>}
+        {/* {skillsDB&&<DataBase skillsBE={skillsDB}/>} */}
       </div>
     </section>
   )

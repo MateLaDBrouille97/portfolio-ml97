@@ -6,7 +6,7 @@ import { useSkillsContext } from '../../contexts/SkillContext';
 
 const Skills = () => {
 
-  const {skillsBE,skillsFE,skillsDB}=useSkillsContext();
+  const {skillsBE,skillsFE}=useSkillsContext();
   
   return (
     <section className="skills section" id="skills">
@@ -18,7 +18,7 @@ const Skills = () => {
       <div className="skills__container container grid">
         {skillsFE&&<Frontend skillsFE={skillsFE}/>}
         {skillsBE&&<Backend skillsBE={skillsBE}/>}
-        {skillsDB&&<DataBase skillsDB={skillsDB}/>}
+        {skillsBE&&<DataBase skillsBE={skillsBE}/>}
       </div>
     </section>
   )
