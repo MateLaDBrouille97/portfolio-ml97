@@ -27,6 +27,40 @@ export enum PortfolioType {
 
 
 
+type EagerLink = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Link, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly title?: string | null;
+  readonly href?: string | null;
+  readonly image?: string | null;
+  readonly userID: string;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyLink = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Link, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly title?: string | null;
+  readonly href?: string | null;
+  readonly image?: string | null;
+  readonly userID: string;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type Link = LazyLoading extends LazyLoadingDisabled ? EagerLink : LazyLink
+
+export declare const Link: (new (init: ModelInit<Link>) => Link) & {
+  copyOf(source: Link, mutator: (draft: MutableModel<Link>) => MutableModel<Link> | void): Link;
+}
+
 type EagerService = {
   readonly [__modelMeta__]: {
     identifier: ManagedIdentifier<Service, 'id'>;
@@ -200,6 +234,7 @@ type EagerUser = {
   readonly support?: string | null;
   readonly descriptionLong?: string | null;
   readonly CV?: string | null;
+  readonly Links?: (Link | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -229,6 +264,7 @@ type LazyUser = {
   readonly support?: string | null;
   readonly descriptionLong?: string | null;
   readonly CV?: string | null;
+  readonly Links: AsyncCollection<Link>;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

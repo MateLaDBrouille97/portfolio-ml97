@@ -38,27 +38,22 @@
 .footer__social-link{
     background-color:rgb(195, 99, 131);
     color: var(--container-color);
-    font-size: 1.60rem;
+    font-size: 1.25rem;
     padding: 0.5rem;
     border-radius:0.6rem;
     display: inline-flex;
 }
 
 .footer__social-link:hover{
-    background-color: rgb(228, 16, 87);
-    transform:scale(1.05);
-    transition: transform 0.5s;
+    background-color: rgb(165, 30, 75);
 }
 
 .color-link1{
-    background-color:rgb(85, 199, 237) ;
-    
+    background-color:rgb(14, 185, 243) ;
 }
 
 .color-link1:hover{
-    background-color:rgb(5, 120, 251) ;
-    transform:scale(1.05);
-    transition: transform 0.5s;
+    background-color:rgb(19, 121, 161) ;
 }
 
 
@@ -67,9 +62,7 @@
 }
 
 .color-link2:hover{
-    background-color:rgb(82, 80, 80) ;
-    transform:scale(1.05);
-    transition: transform 0.5s;
+    background-color:grey ;
 }
 
 .color-link3{

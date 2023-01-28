@@ -25,9 +25,10 @@ const PortfolioType = {
   "SCIENCE": "SCIENCE"
 };
 
-const { Service, Qualification, Skill, PortfolioPost, User } = initSchema(schema);
+const { Link, Service, Qualification, Skill, PortfolioPost, User } = initSchema(schema);
 
 export {
+  Link,
   Service,
   Qualification,
   Skill,

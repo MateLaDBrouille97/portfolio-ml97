@@ -10,15 +10,15 @@ const ScrollUp = () => {
         const scrollUp = this.document.querySelector(".scrollup");
         //scroll higher than 560 viewport height
         //add show-scroll class to a tag with the scroll-top
-        if (this.scrollY >= 560) scrollUp?.classList?.add("show-scroll");
-        else scrollUp?.classList?.remove("show-scroll");
+        if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
+        else scrollUp.classList.remove("show-scroll");
       });
     }
   }, []);
 
-  useEffect(() => {
-    setScroll(false);
-  }, []);
+  // useEffect(() => {
+  //   setScroll(false);
+  // }, []);
 
   return (
     <a href="#" className="scrollup">

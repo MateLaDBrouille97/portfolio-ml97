@@ -52,11 +52,12 @@
 
 .color-link1{
     background-color:rgb(85, 199, 237) ;
-    
+    transform:scale(1.05);
+    transition: transform 0.5s;
 }
 
 .color-link1:hover{
-    background-color:rgb(5, 120, 251) ;
+    background-color:rgb(5, 181, 251) ;
     transform:scale(1.05);
     transition: transform 0.5s;
 }
@@ -68,8 +69,6 @@
 
 .color-link2:hover{
     background-color:rgb(82, 80, 80) ;
-    transform:scale(1.05);
-    transition: transform 0.5s;
 }
 
 .color-link3{

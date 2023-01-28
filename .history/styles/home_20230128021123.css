@@ -16,29 +16,19 @@
 }
 
 .home__social-icon{
-    font-size:1.55rem;
+    font-size:1.5rem;
     color: var(--title-color);
 }
 
 .home__social-icon:hover{
-    
-}
-
-.icon-instagram:hover{
     color:rgb(165, 30, 75);
 }
 
-.icon-linkedIn:hover{
-    color:rgb(30, 30, 165);
-}
 
-.icon-github:hover{
-    color:rgb(136, 136, 136);
-}
 
-/* .home__social-icon:hover{
+.home__social-icon:hover{
     color: var(--title-color-dark);
-} */
+}
 
 .home__title{
     font-size:var(--h1-font-size);
