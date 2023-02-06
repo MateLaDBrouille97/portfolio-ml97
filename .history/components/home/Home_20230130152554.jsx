@@ -15,14 +15,11 @@ const Home = () => {
         <div className="home__container container grid">
             <div className="home__content grid">
                <Social/>
-              
-                {image&&<Image src={image} alt="" className="home__img"/>}
-               
+                {image&&<Image src={image} alt="" className="home__img" width={375} height={350}/>}              
               { dbUser &&<Data user={dbUser}/>}
             </div>
             <ScrollDow/>
         </div>
-
     </section>
 
   )

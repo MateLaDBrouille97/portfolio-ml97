@@ -53,8 +53,8 @@ const WorkItems = (props) => {
           src={image}
           alt=""
           className="work__img"
-          width={400}
-          height={400}
+          width={330}
+          height={320}
         />
         <h3 className="work__title">{item?.title}</h3>
         <span className="work__button" onClick={() => showWork(item, 1)}>
