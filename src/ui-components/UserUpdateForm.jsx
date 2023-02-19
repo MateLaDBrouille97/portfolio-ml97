@@ -182,6 +182,7 @@ export default function UserUpdateForm(props) {
     support: undefined,
     descriptionLong: undefined,
     CV: undefined,
+    avatar: undefined,
   };
   const [firstName, setFirstName] = React.useState(initialValues.firstName);
   const [lastName, setLastName] = React.useState(initialValues.lastName);
@@ -204,6 +205,7 @@ export default function UserUpdateForm(props) {
     initialValues.descriptionLong
   );
   const [CV, setCV] = React.useState(initialValues.CV);
+  const [avatar, setAvatar] = React.useState(initialValues.avatar);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = { ...initialValues, ...userRecord };
@@ -223,6 +225,7 @@ export default function UserUpdateForm(props) {
     setSupport(cleanValues.support);
     setDescriptionLong(cleanValues.descriptionLong);
     setCV(cleanValues.CV);
+    setAvatar(cleanValues.avatar);
     setErrors({});
   };
   const [userRecord, setUserRecord] = React.useState(user);
@@ -252,6 +255,7 @@ export default function UserUpdateForm(props) {
     support: [],
     descriptionLong: [],
     CV: [],
+    avatar: [],
   };
   const runValidationTasks = async (fieldName, value) => {
     let validationResponse = validateField(value, validations[fieldName]);
@@ -286,6 +290,7 @@ export default function UserUpdateForm(props) {
           support,
           descriptionLong,
           CV,
+          avatar,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -351,6 +356,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.firstName ?? value;
@@ -389,6 +395,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.lastName ?? value;
@@ -427,6 +434,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.email ?? value;
@@ -466,6 +474,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.phone ?? value;
@@ -504,6 +513,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.instagram ?? value;
@@ -542,6 +552,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.description ?? value;
@@ -580,6 +591,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.image ?? value;
@@ -618,6 +630,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.github ?? value;
@@ -652,6 +665,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             values = result?.title ?? values;
@@ -719,6 +733,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.experience ?? value;
@@ -766,6 +781,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.projectNumber ?? value;
@@ -804,6 +820,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.sub ?? value;
@@ -842,6 +859,7 @@ export default function UserUpdateForm(props) {
               support: value,
               descriptionLong,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.support ?? value;
@@ -880,6 +898,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong: value,
               CV,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.descriptionLong ?? value;
@@ -918,6 +937,7 @@ export default function UserUpdateForm(props) {
               support,
               descriptionLong,
               CV: value,
+              avatar,
             };
             const result = onChange(modelFields);
             value = result?.CV ?? value;
@@ -931,6 +951,45 @@ export default function UserUpdateForm(props) {
         errorMessage={errors.CV?.errorMessage}
         hasError={errors.CV?.hasError}
         {...getOverrideProps(overrides, "CV")}
+      ></TextField>
+      <TextField
+        label="Avatar"
+        isRequired={false}
+        isReadOnly={false}
+        defaultValue={avatar}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              firstName,
+              lastName,
+              email,
+              phone,
+              instagram,
+              description,
+              image,
+              github,
+              title,
+              experience,
+              projectNumber,
+              sub,
+              support,
+              descriptionLong,
+              CV,
+              avatar: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.avatar ?? value;
+          }
+          if (errors.avatar?.hasError) {
+            runValidationTasks("avatar", value);
+          }
+          setAvatar(value);
+        }}
+        onBlur={() => runValidationTasks("avatar", avatar)}
+        errorMessage={errors.avatar?.errorMessage}
+        hasError={errors.avatar?.hasError}
+        {...getOverrideProps(overrides, "avatar")}
       ></TextField>
       <Flex
         justifyContent="space-between"

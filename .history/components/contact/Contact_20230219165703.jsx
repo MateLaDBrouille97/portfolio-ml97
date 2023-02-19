@@ -60,7 +60,7 @@ const Contact = () => {
             <div className="contact__card">
               <Icon icon="bxl:whatsapp" className="contact__card-icon"></Icon>
               <h3 className="contact__card-title">WhatApp</h3>
-              <span className="contact__card-data"></span>
+              <span className="contact__card-data">{dbUser?.phone}</span>
               <a
                 href="https://api.whatsapp.com/send?phone=15146490492&text=Hello"
                 className="contact__button"
@@ -76,7 +76,7 @@ const Contact = () => {
             <div className="contact__card">
               <Icon icon="bxl:instagram" className="contact__card-icon"></Icon>
               <h3 className="contact__card-title">Instagram</h3>
-              <span className="contact__card-data">{dbUser?.instagram}</span>
+              <span className="contact__card-data"></span>
               <a
                 href="https://www.instagram.com/oto.mata33/"
                 className="contact__button"

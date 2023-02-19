@@ -28,6 +28,7 @@ export declare type UserCreateFormInputValues = {
     support?: string;
     descriptionLong?: string;
     CV?: string;
+    avatar?: string;
 };
 export declare type UserCreateFormValidationValues = {
     firstName?: ValidationFunction<string>;
@@ -45,6 +46,7 @@ export declare type UserCreateFormValidationValues = {
     support?: ValidationFunction<string>;
     descriptionLong?: ValidationFunction<string>;
     CV?: ValidationFunction<string>;
+    avatar?: ValidationFunction<string>;
 };
 export declare type FormProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type UserCreateFormOverridesProps = {
@@ -64,6 +66,7 @@ export declare type UserCreateFormOverridesProps = {
     support?: FormProps<TextFieldProps>;
     descriptionLong?: FormProps<TextFieldProps>;
     CV?: FormProps<TextFieldProps>;
+    avatar?: FormProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type UserCreateFormProps = React.PropsWithChildren<{
     overrides?: UserCreateFormOverridesProps | undefined | null;
