@@ -2,6 +2,12 @@ import { ModelInit, MutableModel, __modelMeta__, ManagedIdentifier } from "@aws-
 // @ts-ignore
 import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/datastore";
 
+export enum BlogCategory {
+  USEFULHACKS = "USEFULHACKS",
+  PROJECTS = "PROJECTS",
+  NEWS = "NEWS"
+}
+
 export enum SkillType {
   BACKEND = "BACKEND",
   FRONTEND = "FRONTEND",
@@ -27,6 +33,36 @@ export enum PortfolioType {
 
 
 
+type EagerCategory = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Category, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly name?: string | null;
+  readonly image?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyCategory = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Category, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly name?: string | null;
+  readonly image?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type Category = LazyLoading extends LazyLoadingDisabled ? EagerCategory : LazyCategory
+
+export declare const Category: (new (init: ModelInit<Category>) => Category) & {
+  copyOf(source: Category, mutator: (draft: MutableModel<Category>) => MutableModel<Category> | void): Category;
+}
+
 type EagerBlogPost = {
   readonly [__modelMeta__]: {
     identifier: ManagedIdentifier<BlogPost, 'id'>;
@@ -37,8 +73,8 @@ type EagerBlogPost = {
   readonly subtitle?: string | null;
   readonly description?: string | null;
   readonly image?: string | null;
-  readonly BlogCategory?: string | null;
   readonly userID: string;
+  readonly category?: BlogCategory | keyof typeof BlogCategory | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -53,8 +89,8 @@ type LazyBlogPost = {
   readonly subtitle?: string | null;
   readonly description?: string | null;
   readonly image?: string | null;
-  readonly BlogCategory?: string | null;
   readonly userID: string;
+  readonly category?: BlogCategory | keyof typeof BlogCategory | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

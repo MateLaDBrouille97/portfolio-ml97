@@ -1,5 +1,71 @@
 export const schema = {
     "models": {
+        "Category": {
+            "name": "Category",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "name": {
+                    "name": "name",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "image": {
+                    "name": "image",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "Categories",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "BlogPost": {
             "name": "BlogPost",
             "fields": {
@@ -38,18 +104,20 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "BlogCategory": {
-                    "name": "BlogCategory",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "userID": {
                     "name": "userID",
                     "isArray": false,
                     "type": "ID",
                     "isRequired": true,
+                    "attributes": []
+                },
+                "category": {
+                    "name": "category",
+                    "isArray": false,
+                    "type": {
+                        "enum": "BlogCategory"
+                    },
+                    "isRequired": false,
                     "attributes": []
                 },
                 "createdAt": {
@@ -863,6 +931,14 @@ export const schema = {
         }
     },
     "enums": {
+        "BlogCategory": {
+            "name": "BlogCategory",
+            "values": [
+                "USEFULHACKS",
+                "PROJECTS",
+                "NEWS"
+            ]
+        },
         "SkillType": {
             "name": "SkillType",
             "values": [
@@ -897,5 +973,5 @@ export const schema = {
     },
     "nonModels": {},
     "codegenVersion": "3.3.2",
-    "version": "62642d7d4ba0f25fcf38018d8c9ddceb"
+    "version": "cede2cd10cc53b8535f774025973fae2"
 };

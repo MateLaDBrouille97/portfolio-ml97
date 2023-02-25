@@ -1,11 +1,23 @@
+type Category @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  image: String
+}
+
+enum BlogCategory {
+  USEFULHACKS
+  PROJECTS
+  NEWS
+}
+
 type BlogPost @model @auth(rules: [{allow: public}]) {
   id: ID!
   title: String
   subtitle: String
   description: String
   image: String
-  BlogCategory: String
   userID: ID! @index(name: "byUser")
+  category: BlogCategory
 }
 
 type Link @model @auth(rules: [{allow: public}]) {

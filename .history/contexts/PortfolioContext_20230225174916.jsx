@@ -9,6 +9,7 @@ const PortfolioContext = createContext({});
 const PortfolioContextProvider = ({ children }) => {
 
     const{dbUser}=useUserContext();
+    const userId="6a4ad658-8482-4df0-a5a1-4e8d757782f2"
     const[portfolioApp,setPortfolioApp]=useState([]);
     const[portfolioWeb,setPortfolioWeb]=useState([]);
     const[portfolioSci,setPortfolioSci]=useState([]);
@@ -16,7 +17,7 @@ const PortfolioContextProvider = ({ children }) => {
 
     useEffect(()=>{
         const fetchPort= () => {
-          DataStore.query(PortfolioPost,p=>p.userID.eq(dbUser?.id)).then(ports=>setData(ports));
+          DataStore.query(PortfolioPost,p=>p.userID.eq(userId)).then(ports=>setData(ports));
           const folio1 =data.filter(d=>d?.type=="APP");setPortfolioApp(folio1);
           const folio2 =data.filter(d=>d?.type=="WEB");setPortfolioWeb(folio2);
           const folio3 =data.filter(d=>d?.type=="SCIENCE");setPortfolioSci(folio3);

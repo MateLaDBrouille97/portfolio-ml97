@@ -9,13 +9,14 @@ const QualiContext = createContext({});
 const QualiContextProvider = ({ children }) => {
 
     const{dbUser}=useUserContext();
+    const userId="6a4ad658-8482-4df0-a5a1-4e8d757782f2"
     const [edu,setEdu]=useState([]);
     const [exp,setExp]=useState([]);
     const [qual,setQual]=useState([]);
 
     useEffect(()=>{
         const fetchQual= async ()=>{
-          await DataStore.query(Qualification,q=>q.userID.eq(dbUser?.id)).then(quals=>setQual(quals));
+          await DataStore.query(Qualification,q=>q.userID.eq(userId)).then(quals=>setQual(quals));
           const quals1=qual.filter(q=>q.type=="EDUCATION");setEdu(quals1);
           const quals2=qual.filter(q=>q.type=="EXPERIENCE");setExp(quals2);
           // await DataStore.query(Qualification,q=>q.type.eq("EDUCATION")).then(quals=>setEdu(quals));
