@@ -18,6 +18,7 @@ type BlogPost @model @auth(rules: [{allow: public}]) {
   image: String
   userID: ID! @index(name: "byUser")
   category: BlogCategory
+  slug: String
 }
 
 type Link @model @auth(rules: [{allow: public}]) {

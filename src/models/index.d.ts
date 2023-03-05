@@ -75,6 +75,7 @@ type EagerBlogPost = {
   readonly image?: string | null;
   readonly userID: string;
   readonly category?: BlogCategory | keyof typeof BlogCategory | null;
+  readonly slug?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -91,6 +92,7 @@ type LazyBlogPost = {
   readonly image?: string | null;
   readonly userID: string;
   readonly category?: BlogCategory | keyof typeof BlogCategory | null;
+  readonly slug?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
