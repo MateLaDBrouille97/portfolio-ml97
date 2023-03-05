@@ -15,9 +15,10 @@
 }
 
 .testimonial__container3{
-   width:950px;
-
-  
+    min-width: 350px;
+    min-height: 350px;
+    max-width: 100%;
+    max-height: 100%;
     
 }
 

@@ -102,39 +102,12 @@
 .work__card-info-catdate{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding-bottom: 5px;
+    gap: 6px;
+    padding-bottom: 4px;
 }
 
-.work__card-info-cat{
-color: rgba(255, 166, 0, 0.982);
-font-size:larger;
-}
 
-.work__card-info-cat:hover{
-color: rgba(193, 127, 3, 0.947);
-}
 
-.work__card-info-date{
-color: gray;
-font-size:medium;
-
-}
-
-.work__card-info-date:hover{
-color: black;
-}
-
-.blog__page{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin:30px;
-
-}
 .swiper-slide {
     text-align: center;
     font-size: 18px;

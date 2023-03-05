@@ -70,15 +70,15 @@ const BlogItem = ({ item }) => {
           height={500}
         />
         <h3 className="work__title2">{item?.title}</h3>
-        <div className="info work__card-info">
-          <div className="cat work__card-info-catdate">
-            <a className="work__card-info-cat">
+        <div className="info flex justify-center flex-col py-4">
+          <div className="cat flex gap-6">
+            <div className="text-orange-600 hover:text-orange-800">
               {item?.category || "UnKnown"}
-            </a>
+            </div>
 
-            <a className="work__card-info-date">
+            <div className="text-gray-600 hover:text-gray-800">
               {date || "UnKnown"}
-            </a>
+            </div>
           </div>
           <p className="work__modal-description">{item?.description}</p>
         </div>

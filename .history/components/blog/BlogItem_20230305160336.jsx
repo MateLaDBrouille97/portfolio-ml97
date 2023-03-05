@@ -76,7 +76,7 @@ const BlogItem = ({ item }) => {
               {item?.category || "UnKnown"}
             </a>
 
-            <a className="work__card-info-date">
+            <a className="text-gray-600 hover:text-gray-800">
               {date || "UnKnown"}
             </a>
           </div>

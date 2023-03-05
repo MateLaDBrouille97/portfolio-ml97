@@ -102,8 +102,6 @@
 .work__card-info-catdate{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 8px;
     padding-bottom: 5px;
 }
@@ -127,14 +125,6 @@ font-size:medium;
 color: black;
 }
 
-.blog__page{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin:30px;
-
-}
 .swiper-slide {
     text-align: center;
     font-size: 18px;

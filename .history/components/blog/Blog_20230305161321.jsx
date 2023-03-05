@@ -23,8 +23,7 @@ useEffect(()=>{
         <h2 className="section__title">Blog</h2>
         <span className="section__subtitle">Most recent posts</span>
         <Posts/>
-        <div className="blog__page">
-        <a href="#contact" className=" button button--flex"> Visit my Blog
+        <a href="#contact" className="button button--flex"> Visit my Blog
         <svg
                   className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +42,6 @@ useEffect(()=>{
                   ></path>
                 </svg>
         </a>
-        </div>
-        
     </section>
   )
 }

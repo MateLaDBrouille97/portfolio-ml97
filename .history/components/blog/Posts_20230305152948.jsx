@@ -3,7 +3,7 @@ import { useBlogContext } from '../../contexts/BlogContext';
 import { usePortfolioContext } from '../../contexts/PortfolioContext';
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from 'next/image'
-import SwiperCore, { Autoplay } from "swiper";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
@@ -12,7 +12,7 @@ import BlogItem from './BlogItem';
 // import WorkItems from './WorkItems';
 
 const Posts = () => {
-  SwiperCore.use([Autoplay]);
+  
  const [item,setItem]=useState({name:"All"});
  const [blogPosts,setBlogPosts]=useState([]);
  
@@ -45,13 +45,7 @@ const Posts = () => {
 //  }
 
 useEffect(()=>{
- const filter =data.slice(0,9).sort((a, b) => {
-        
-  if ( b.createdAt > a.createdAt) return 1
-  if (b.createdAt < a.createdAt) return -1
-  return 0
-});
- setBlogPosts(filter)
+ setBlogPosts(data)
 },[data])
 
 
@@ -76,12 +70,9 @@ useEffect(()=>{
     </div> */}
 
 <Swiper 
-       className="testimonial__container3 "
+       className="testimonial__container3"
        loop={true}
        grabCursor={true}
-       autoplay={{
-         delay: 4000,
-       }}
        spaceBetween={10}
        pagination={{
          clickable: true,
@@ -113,7 +104,7 @@ useEffect(()=>{
     
       </Swiper>
 
-      
+
 
 
 

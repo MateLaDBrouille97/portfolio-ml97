@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
+
+
 const aws = require("aws-sdk");
 
 const BlogItem = ({ item }) => {
+  
   const [work, setWork] = useState(null);
   const [toggleState, setToggleState] = useState(0);
   const [techno, setTechno] = useState([]);
-
+ 
   const [image, setImage] = useState();
   const s3 = new aws.S3();
 
@@ -41,26 +44,29 @@ const BlogItem = ({ item }) => {
     fetchImage();
   }, [work]);
 
-  //   useEffect(() => {
-  //     setTechno(item?.technologies);
-  //   }, [work]);
+//   useEffect(() => {
+//     setTechno(item?.technologies);
+//   }, [work]);
 
-  //Date
 
-  const [date, setDate] = useState("");
-  useEffect(() => {
-    const convertAwsDateToDate = (awsDate) => {
-      const year = awsDate.substring(0, 4);
-      const month = awsDate.substring(5, 7) - 1; // Subtract 1 since months are zero-indexed
-      const day = awsDate.substring(8, 10);
-      const newDate = new Date(year, month, day).toLocaleDateString();
-      setDate(newDate);
-    };
-    convertAwsDateToDate(item?.createdAt);
-  }, [item]);
+//Date
+
+const [date, setDate] = useState("");
+ useEffect(() => {
+      const convertAwsDateToDate = (awsDate) => {
+        const year = awsDate.substring(0, 4);
+        const month = awsDate.substring(5, 7) - 1; // Subtract 1 since months are zero-indexed
+        const day = awsDate.substring(8, 10);
+        const newDate = new Date(year, month, day).toLocaleDateString();
+        setDate(newDate);
+      };
+      convertAwsDateToDate(item?.createdAt);
+    }, [item]);
 
   return (
-    <div className="testimonial__container3">
+    <div 
+    className="testimonial__container3"
+    >
       <div className="work__card2" key={item?.id}>
         <Image
           src={image}
@@ -70,19 +76,21 @@ const BlogItem = ({ item }) => {
           height={500}
         />
         <h3 className="work__title2">{item?.title}</h3>
-        <div className="info work__card-info">
-          <div className="cat work__card-info-catdate">
-            <a className="work__card-info-cat">
-              {item?.category || "UnKnown"}
-            </a>
-
-            <a className="work__card-info-date">
-              {date || "UnKnown"}
-            </a>
+        <div className="cat flex gap-6">
+           
+              <a className="text-orange-600 hover:text-orange-800">
+                {item?.category || "UnKnown"}
+              </a>
+       
+            
+              <a className="text-gray-600 hover:text-gray-800">
+                {date || "UnKnown"}
+              </a>
+           
           </div>
-          <p className="work__modal-description">{item?.description}</p>
-        </div>
+        <p className="work__modal-description">{item?.description}</p>
       </div>
+      
     </div>
   );
 };

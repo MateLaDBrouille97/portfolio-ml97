@@ -45,13 +45,7 @@ const Posts = () => {
 //  }
 
 useEffect(()=>{
- const filter =data.slice(0,9).sort((a, b) => {
-        
-  if ( b.createdAt > a.createdAt) return 1
-  if (b.createdAt < a.createdAt) return -1
-  return 0
-});
- setBlogPosts(filter)
+ setBlogPosts(data)
 },[data])
 
 
@@ -113,7 +107,7 @@ useEffect(()=>{
     
       </Swiper>
 
-      
+
 
 
 
