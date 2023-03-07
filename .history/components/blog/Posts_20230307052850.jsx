@@ -94,10 +94,13 @@ const Posts = () => {
             slidesPerView: 1,
           },
           820: {
-            slidesPerView: 2,
-            spaceBetween: 48,   
+            slidesPerView: 1,
+            
           },
-          
+          950: {
+            slidesPerView: 2,
+            spaceBetween: 48,
+          }
         }}
         modules={[Pagination]}
       >

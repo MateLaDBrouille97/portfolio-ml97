@@ -107,12 +107,6 @@ color: black;
     align-items: center;
   }
 
-  .work__modal-description2{
-    font-size: var(--normal-font-size);
-    padding: 0 3.5rem;
-    margin-bottom:var(--mb-2);
-}
-
 
   /*=============== BREAKPOINTS ===============*/
 /* For large devices */
@@ -130,27 +124,19 @@ color: black;
     }
 
     .work__title2{
-        font-size: var(--normal-font-size);
-        font-weight:var(--font-semi-bold);
-
+        font-size: var(--small-font-size);
+        font-weight:var(--font-small);
     }
     
-    .work__card-info-cat{
-        color: rgba(255, 166, 0, 0.982);
-        font-size:var(--normal-font-size);
-        
-        }
-
-        .work__card-info-date{
-            color: gray;
-            font-size:var(--normal-font-size);
-            
-            }  
-    .work__modal-description2{
-        font-size: var(--small-font-size);
-        line-height: 25px;
+    
+    .work__card-info-catdate{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 5px;
     }
-
     
   }
   
@@ -177,11 +163,6 @@ color: black;
         justify-content: center;
         align-items: center;
         width:250px;
-    }
-
-    .work__modal-description2{
-        font-size: var(--smaller-font-size);
-        line-height: 20px;
     }
   }
   

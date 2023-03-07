@@ -39,15 +39,7 @@ border-radius: 1.25rem;
 }
 
 .skills__data:hover{
-    color:teal;
-}
-
-.skills__data:hover .skills__card-icon {
-    color:teal;
-}
-
-.skills__data:hover .skills__name{
-    color:teal;
+    color:cadetblue;
 }
 
 .skills .bx-badge-check{

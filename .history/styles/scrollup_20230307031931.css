@@ -1,13 +1,13 @@
 .scrollup{
     position:fixed;
-    right: 3.5rem;
+    right: 2.5rem;
     bottom: 3rem;
     background-color: var(--title-color);
     opacity:0.8;
     padding:0.3rem 0.5rem;
-    border-radius:1.5rem;
-    height: 3rem;
-    width: 3rem;
+    border-radius:1rem;
+    height: 2rem;
+    width: 2rem;
     z-index: var(--z-tooltip);
     transition: .4s;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .scrollup__icon{
-    font-size: 5rem;
+    font-size: 1.75rem;
     color: var(--container-color);
     display: flex;
     justify-content: center;

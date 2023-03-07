@@ -95,7 +95,8 @@ const Posts = () => {
           },
           820: {
             slidesPerView: 2,
-            spaceBetween: 48,   
+            spaceBetween: 48,
+            
           },
           
         }}

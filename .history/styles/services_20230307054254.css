@@ -1,7 +1,7 @@
 .services__container{
-    grid-template-columns: repeat(2,390px);
+    grid-template-columns: repeat(2,370px);
     justify-content: center;
-    column-gap: 2.5rem;
+    column-gap: 1.5rem;
 
 }
 
@@ -168,7 +168,7 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
     .services__container{
-        grid-template-columns: repeat(2,318px);
+        grid-template-columns: repeat(3,218px);
     }
   }
   

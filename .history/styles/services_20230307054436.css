@@ -168,7 +168,7 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
     .services__container{
-        grid-template-columns: repeat(2,318px);
+        grid-template-columns: repeat(3,218px);
     }
   }
   
