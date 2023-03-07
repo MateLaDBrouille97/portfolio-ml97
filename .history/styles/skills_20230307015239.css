@@ -33,6 +33,9 @@ border-radius: 1.25rem;
 .skills__data{
     display: flex;
     column-gap: 0.5rem;
+    transition: transform 0.5s;
+    padding:10px;
+    margin:5px
 }
 
 .skills .bx-badge-check{
@@ -55,6 +58,12 @@ border-radius: 1.25rem;
     color: var(--title-color);
     margin-bottom: var(--mb-0-25);
 }
+
+.skills__data:hover{
+    transform: translate(2px);
+    transform:scale(1.10); 
+}
+
 
 .center {
     justify-content: center;

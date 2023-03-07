@@ -15,12 +15,7 @@ const {data}= useBlogContext();
 const [blogPost,setBlogPost]=useState([]);
 
 useEffect(()=>{
-    const filtered = data.sort((a, b) => {
-      if (b.createdAt > a.createdAt) return 1;
-      if (b.createdAt < a.createdAt) return -1;
-      return 0;
-    });
-    setBlogPost(filtered);
+    setBlogPost(data)
 },[data])
 
   return (
@@ -29,7 +24,7 @@ useEffect(()=>{
         <span className="section__subtitle">Most recent posts</span>
         <Posts/>
         <div className="blog__page">
-        <a href="https://blog-mateladbrouille97.vercel.app/" className=" button button--flex"> Visit my Blog
+        <a href="#contact" className=" button button--flex"> Visit my Blog
         <svg
                   className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"

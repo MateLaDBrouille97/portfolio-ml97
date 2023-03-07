@@ -15,12 +15,7 @@ const {data}= useBlogContext();
 const [blogPost,setBlogPost]=useState([]);
 
 useEffect(()=>{
-    const filtered = data.sort((a, b) => {
-      if (b.createdAt > a.createdAt) return 1;
-      if (b.createdAt < a.createdAt) return -1;
-      return 0;
-    });
-    setBlogPost(filtered);
+    setBlogPost(data)
 },[data])
 
   return (

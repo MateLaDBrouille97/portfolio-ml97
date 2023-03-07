@@ -20,7 +20,7 @@ useEffect(()=>{
       if (b.createdAt < a.createdAt) return -1;
       return 0;
     });
-    setBlogPost(filtered);
+    setBlogPost(filtered)
 },[data])
 
   return (

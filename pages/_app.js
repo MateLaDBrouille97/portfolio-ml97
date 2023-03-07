@@ -10,6 +10,8 @@ import  "../styles/services.css";
 import  "../styles/skills.css";
 import  "../styles/testimonials.css";
 import  "../styles/work.css";
+import "../styles/blog.css";
+
 import React from 'react';
 
 

@@ -20,7 +20,7 @@ const Header = () => {
   const [activeNav, setActiveNav] = useState("#home");
 
   /* +++++++++++++++++++++++++++++++++++++++++++++++++ */
-  const { dbUser, image,avatar } = useUserContext();
+  const { dbUser, image } = useUserContext();
 
   const breakpoints = (width) => {
     if (width < 640) {
@@ -68,7 +68,7 @@ const Header = () => {
           <div>
             {image && (
               <Image
-                src={avatar}
+                src={image}
                 alt=""
                 className="nav__lg-img"
                 width={60}

@@ -35,7 +35,7 @@ const {dbUser}=useUserContext();
                  <Icon icon="bxl:github"></Icon>
               </a>
 
-              <a href="https://blog-mateladbrouille97.vercel.app/" className="footer__social-link color-link3" target="_blank" rel="noreferrer">
+              <a href="https://github.com/LuckyMate97" className="footer__social-link color-link2" target="_blank" rel="noreferrer">
                  <Icon icon="brandico:blogger" ></Icon>
               </a>
      

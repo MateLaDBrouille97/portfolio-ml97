@@ -73,11 +73,11 @@
 }
 
 .color-link3{
-    background-color:rgb(195, 99, 131);
+    background-color:rgb(192, 175, 92);
 }
 
-.color-link3{
-    background-color: rgb(165, 30, 75);
+.color-link3:hover{
+    background-color: rgb(235, 197, 7);
 }
 
 .footer__copy{
